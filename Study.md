@@ -106,4 +106,103 @@ map.get("people"); \\get key에 해당하는 value값을 리턴
 map.containsKey("people");  \\containskey  Map에 해당 key가 있는지 조사해 불린형으로 리턴
 map.remove("people");   \\remove 해당하는 (key:value)값을 삭제하고 삭제된 value값을 리턴
 map.size();  \\size  Map의 갯수 리턴
+
+
+### 제어문
+
+#### if문
+
+```
+\\기본구조 조건문 뒤에는 ;붙이지 않음
+if (조건문) { 
+    <수행할 문장1>
+    <수행할 문장2>
+    ...
+} else {
+    <수행할 문장A>
+    <수행할 문장B>
+    ...
+}
+```
+
+비교연산자
+
+```
+x < y	x가 y보다 작다
+x > y	x가 y보다 크다
+x == y	x와 y가 같다
+x != y	x와 y가 같지 않다
+x >= y	x가 y보다 크거나 같다
+x <= y	x가 y보다 작거나 같다  \\파이썬과 동일
+
+and(&&), or(||), not(!)
+```
+
+else if # 파이썬의 elif
+
+```
+if (pocket.contains("money")) {
+    System.out.println("택시를 타고 가라");
+}else if(hasCard) {
+    System.out.println("택시를 타고 가라");
+}else {         
+    System.out.println("걸어가라");
+```
+
+
+
+#### Switch/case 문
+
+```
+\\기본 구조  입력변수뒤에는 ;없음
+switch(입력변수) {
+    case 입력값1: ...
+         break; //아니면 다음 case문 실행
+    case 입력값2: ...
+         break;
+    ...
+    default: ...
+         break;
+}
+```
+
+
+
+#### While 문
+
+```
+//기본구조
+while (조건문) {
+    <수행할 문장1>
+    <수행할 문장2>
+    <수행할 문장3>
+    ...
+}
+```
+```
+//무한루프 할려면 조건문에 ture 넣기
+//빠져나가기 break사용
+while (money > 0) {
+    System.out.println("돈을 받았으니 커피를 줍니다.");
+    coffee--;
+    System.out.println("남은 커피의 양은 " + coffee + "입니다.");
+    if (coffee == 0) {
+        System.out.println("커피가 다 떨어졌습니다. 판매를 중지합니다.");
+        break; // 브레이크로 빠져나오기
+    }
+}
+```
+```
+//While 조건문으로 돌아가기 (countinue)
+int a = 0;
+while (a < 10) {
+    a++;
+    if (a % 2 == 0) {
+        continue;
+    }
+    System.out.println(a);
+}
+//countinue는 while문의 처음으로 (a++;)로 돌아감
+```
+
 ```
