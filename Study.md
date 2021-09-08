@@ -107,7 +107,6 @@ map.containsKey("people");  \\containskey  Map에 해당 key가 있는지 조사
 map.remove("people");   \\remove 해당하는 (key:value)값을 삭제하고 삭제된 value값을 리턴
 map.size();  \\size  Map의 갯수 리턴
 
-
 ### 제어문
 
 #### if문
@@ -167,6 +166,7 @@ switch(입력변수) {
 ```
 
 
+
 #### While 문
 
 ```
@@ -207,4 +207,3 @@ while (a < 10) {
 ```
 
 
-```
