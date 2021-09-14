@@ -206,3 +206,44 @@ while (a < 10) {
 //countinue는 while문의 처음으로 (a++;)로 돌아감
 ```
 
+### for 문
+
+```
+String[] numbers = {"one", "two", "three"};  //전형인 for 문
+for(int i=0; i<numbers.length; i++) {   \\.length는 리스트의 요소 개수
+    System.out.println(numbers[i]);
+}
+```
+
+```
+for (초기치; 조건문; 증가치) //c언어와 동일
+```
+
+```
+int[] marks = {90, 25, 67, 45, 80};
+for(int i=0; i<marks.length; i++) {
+    if (marks[i] < 60) {
+        continue;   \\ 컨티뉴를 만나면 for문의 처음으로 돌아가게 된다.
+    }
+    System.out.println((i+1)+"번 학생 축하합니다. 합격입니다.");
+}
+```
+
+
+
+#### for each 문
+
+```\
+String[] numbers = {"one", "two", "three"};
+for(String number: numbers) {      \\ 더 직관적. 
+    System.out.println(number);
+}
+```
+
+```
+for (type var: iterate) {   \\기본 구조  iterate는 루프를 돌릴 객체,한개씩 순차적으로 var에 대입. iterate에 배열및 ArrayList도 가능
+    body-of-loop
+}
+```
+
+ for each문은 따로 반복회수를 명시적으로 주는 것이 불가능, 1스탭씩 순차적으로 반복될때만 사용 가능하다.
