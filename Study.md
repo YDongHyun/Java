@@ -247,3 +247,93 @@ for (type var: iterate) {   \\기본 구조  iterate는 루프를 돌릴 객체,
 ```
 
  for each문은 따로 반복회수를 명시적으로 주는 것이 불가능, 1스탭씩 순차적으로 반복될때만 사용 가능하다.
+
+## ※객체지향※
+
+### 클래스
+
+```
+public class Car{  // 자동차 클래스를 만든다. 껍대기 뿐임 클래스. 클래스는 객체를 만드는 기능을 가진다.
+}
+```
+
+```
+//객체만들기
+Car Hyundai = new Car();   // new는 객체를 사용할때 사용하는 키워드.
+```
+
+Hyundai라는 객체를 생성.
+
+과자틀 -> 클래스    과자 -> 객체  로 생각하자.
+
+
+
+### 객체변수
+
+클래스에 변수를 지정해준다.
+
+```
+public class Car {
+    String name;  // name이라는 변수를 추가한다. 이를 객체변수라 한다.   
+} 
+```
+
+```
+//객체.객체변수로 접근 가능
+Hyundai.name // 객체: Hyundai , 객체변수 : name
+```
+
+```
+public class Car {
+    String name;
+
+    public static void main(String[] args) {
+        Car Hyundai = new Car();
+        System.out.println(Hyundai.name);
+    }
+}
+\\실행하면 null을 출력한다. name에 아무값도 대입을 안시켜서 null이 나옴.
+```
+
+
+
+### 메소드
+
+객체변수에 값을 대입하는 가장 보편적인 방법인 메소드.
+
+메소드는 클래스 내에 구현된 함수를 의미.
+
+````
+public class Car {
+    String name;
+
+    public void setName(String name) {     //setName 메소드 추가
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
+        Car Hyundai = new Car();
+        System.out.println(Hyundai.name);
+    }
+}
+````
+
+객체.메소드 로 호출할 수 있다.
+
+```
+public static void main(String[] args) {
+        Car Hyundai = new Animal();
+        Hyundai.setName("boby");  // 메소드 호출
+        System.out.println(Hyundai.name);
+    }
+```
+
+따라서
+
+```
+this.name = "boby"; //로 해석될것이다.
+Hyundai.name="boby";
+```
+
+참고로 객체변수는 공유되지 않는다.
+
