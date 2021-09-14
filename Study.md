@@ -231,7 +231,7 @@ for(int i=0; i<marks.length; i++) {
 
 
 
-#### for each 문
+### for each 문
 
 ```\
 String[] numbers = {"one", "two", "three"};
